@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dojo survey</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <form action="/process" method="post">
+    <h1>dojo survey</h1>
+
+    <div class="form-group">
+      <label for="name">Name: </label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="location">Dojo Location:</label>
+      <select name="location" class="form-control">
+        <option value="">SELECT ONE</option>
+        <option value="Chicago">Monastir</option>
+        <option value="Burbank">Sousse</option>
+        <option value="Seattle">Kaf</option>
+        <option value="Online">Tunisie</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="language">Favorite Language:</label>
+      <select name="language" class="form-control">
+        <option value="">SELECT ONE</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="C#">C#</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea name="comments" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary">
+  </form>
+</body>
+</html>
